@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <Title>Area of Triangle</Title>
+</head>
+<body>
+    <h1>Count the Area of Triangle</h1>
+<form id="Triangle-Form">
+
+    <label for="base">base: </label><br>
+    <input type="number" id="base" name="base"><br>
+    
+    <label for="height">height: </label><br>
+    <input type="number" id="height" name="height"><br>
+
+    <button type="button" onclick="calculatedArea()"> Calculate </button>
+</form>
+
+<p id="result">result</p>
+
+<script>
+function calculatedArea(){
+    let base = parseFloat(document.getElementById("base").value);
+    let height = parseFloat(document.getElementById("height").value);
+    let area = (base*height) / 2;
+    document.getElementById("result").innerHTML = "Area: " + area;
+}     
+</script>
+</body>
+
+</html>

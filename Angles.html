@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angles of Triangle</title>
+</head>
+<body>
+    <h1>Find the Missing Angle!</h1>
+
+    <label for="sideA">side A: </label><br>
+    <input type="number" id="sideA" name="sideA"><br>
+    
+    <label for="sideB">side B: </label><br>
+    <input type="number" id="sideB" name="sideB"><br>
+
+    <button type="button" onclick="calculatedangle()"> Calculate </button>
+    <br>
+<p id="result">result:</p>
+
+<script>
+function calculatedangle(){
+    let sideA = parseFloat(document.getElementById("sideA").value);
+    let sideB = parseFloat(document.getElementById("sideB").value);
+    let angle = 180 - sideA - sideB
+    document.getElementById("result").innerHTML = "angle: " + angle;
+}     
+</script>
+</body>
+
+</html>

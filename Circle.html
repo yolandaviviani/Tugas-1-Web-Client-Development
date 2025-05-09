@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle Formula</title>
+</head>
+<body>
+
+  <h1>Diameter, Area and Circumference Counter</h1>
+  <input type="number" id="radius" name="radius" placeholder="Enter radius">
+  <button onclick="countcircle()">Count Circle</button>
+  
+  <div id="diameter-result">Diameter: </div>
+  <div id="area-result">Area: </div>
+  <div id="circumference-result">Circumference: </div>
+  
+<script>
+function countcircle(){
+    const radius = parseFloat(document.getElementById("radius").value);
+    
+    // Calculate values
+    const diameter = 2 * radius;
+    const area = Math.PI * radius * radius;
+    const circumference = Math.PI * 2 * radius;
+    
+    // Display results
+    document.getElementById("diameter-result").textContent = "Diameter: " + diameter;
+    document.getElementById("area-result").textContent = "Area: " + area.toFixed(3);
+    document.getElementById("circumference-result").textContent = "Circumference: " + circumference.toFixed(4);
+}
+</script>
+</body>
+</html>
