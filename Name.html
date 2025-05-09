@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Name Initials</title>
+</head>
+<body>
+  <p id="initials"></p>
+  <script>
+    const fullName = prompt("Enter your full name:");
+    const nameArray = fullName.split(" ");
+    let initials = "";
+    for (let i = 0; i < nameArray.length; i++) {
+      initials += nameArray[i].charAt(0).toUpperCase();
+    }
+    document.getElementById("initials").textContent = initials;
+  </script>
+</body>
+</html>
